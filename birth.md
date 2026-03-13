@@ -342,7 +342,7 @@ NLP parsing stage converts queries into structured intent (what's in scope, what
 
 Zombie word filter catches the jargon ecosystem—flagged in levels (block, warn, soft) so you can customize severity.
 
-Constraint gate sits between generation and output. The LLM would check each major clause before committing: "Does this address what was asked? Does it violate scope? Is it meta-commentary?"
+Constraint gate sits between generation and output, but the stronger version starts earlier: the LLM should already be leaning toward an internal editor while the sentence is being formed. Each major clause gets checked before committing: "Does this address what was asked? Does it violate scope? Is it meta-commentary?"
 
 Pipeline orchestrates the full flow: parse → generate → validate → output.
 
